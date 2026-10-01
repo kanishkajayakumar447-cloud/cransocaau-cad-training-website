@@ -101,6 +101,240 @@
     </div>
   </section>
 
+<!-- ================= COURSE SKILL ASSESSMENT V2.0 ================= -->
+
+<section class="assessment-section" id="assessment">
+
+    <div class="assessment-header">
+        <span class="assessment-badge">V2.0 FEATURE</span>
+
+        <h2>Choose Your Course & Test Your Skills</h2>
+
+        <p>
+            Select a course and answer 10 questions to understand
+            your current skill level.
+        </p>
+    </div>
+
+    <!-- COURSE SELECTION -->
+
+    <div class="assessment-card" id="courseSelection">
+
+        <h3>Select Your Course</h3>
+
+        <p class="assessment-subtitle">
+            Choose the course you are interested in.
+        </p>
+
+        <div class="course-options">
+
+            <button class="course-option"
+                    onclick="selectCourse('creo')">
+                <span>⚙️</span>
+                <strong>CREO</strong>
+                <small>3D Product Design</small>
+            </button>
+
+            <button class="course-option"
+                    onclick="selectCourse('solidworks')">
+                <span>🔧</span>
+                <strong>SolidWorks</strong>
+                <small>Mechanical Design</small>
+            </button>
+
+            <button class="course-option"
+                    onclick="selectCourse('catia')">
+                <span>🚗</span>
+                <strong>CATIA</strong>
+                <small>Automotive & Product Design</small>
+            </button>
+
+            <button class="course-option"
+                    onclick="selectCourse('autocad')">
+                <span>📐</span>
+                <strong>AutoCAD</strong>
+                <small>2D & 3D Drafting</small>
+            </button>
+
+            <button class="course-option"
+                    onclick="selectCourse('nxcad')">
+                <span>🏭</span>
+                <strong>NX CAD</strong>
+                <small>Industrial Design</small>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- START ASSESSMENT -->
+
+    <div class="assessment-card hidden" id="startAssessment">
+
+        <div class="selected-course-icon" id="selectedCourseIcon">
+            ⚙️
+        </div>
+
+        <h3 id="selectedCourseTitle">
+            Course Assessment
+        </h3>
+
+        <p>
+            You will answer <strong>10 questions</strong>
+            related to this course.
+        </p>
+
+        <div class="assessment-info">
+
+            <div>
+                <strong>10</strong>
+                <span>Questions</span>
+            </div>
+
+            <div>
+                <strong>10</strong>
+                <span>Marks</span>
+            </div>
+
+            <div>
+                <strong>MCQ</strong>
+                <span>Format</span>
+            </div>
+
+        </div>
+
+        <button class="assessment-btn"
+                onclick="startAssessment()">
+            Start Assessment →
+        </button>
+
+        <button class="back-btn"
+                onclick="backToCourses()">
+            ← Choose Another Course
+        </button>
+
+    </div>
+
+
+    <!-- QUESTIONS -->
+
+    <div class="assessment-card question-card hidden"
+         id="questionContainer">
+
+        <div class="question-top">
+
+            <span id="questionNumber">
+                Question 1 / 10
+            </span>
+
+            <span id="scoreDisplay">
+                Score: 0
+            </span>
+
+        </div>
+
+        <div class="progress-container">
+
+            <div class="progress-bar"
+                 id="progressBar">
+            </div>
+
+        </div>
+
+        <h3 id="questionText">
+            Question will appear here
+        </h3>
+
+        <div class="options"
+             id="optionsContainer">
+        </div>
+
+        <div class="question-buttons">
+
+            <button class="back-btn"
+                    id="previousBtn"
+                    onclick="previousQuestion()">
+                ← Previous
+            </button>
+
+            <button class="assessment-btn"
+                    id="nextBtn"
+                    onclick="nextQuestion()">
+                Next →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="assessment-card result-card hidden"
+         id="resultContainer">
+
+        <div class="result-icon">
+            🎉
+        </div>
+
+        <h3>Assessment Completed!</h3>
+
+        <p id="resultCourse">
+            Course Assessment
+        </p>
+
+        <div class="score-circle">
+
+            <strong id="finalScore">
+                0/10
+            </strong>
+
+            <span id="percentage">
+                0%
+            </span>
+
+        </div>
+
+        <h4>Your Skill Level</h4>
+
+        <div class="level-badge"
+             id="skillLevel">
+            Beginner
+        </div>
+
+        <p id="resultMessage">
+            Your result will appear here.
+        </p>
+
+        <div class="recommended-course">
+
+            <span>Recommended Training</span>
+
+            <strong id="recommendedCourse">
+                -
+            </strong>
+
+        </div>
+
+        <div class="result-buttons">
+
+            <button class="assessment-btn"
+                    onclick="retakeAssessment()">
+                Retake Assessment
+            </button>
+
+            <a href="#contact"
+               class="assessment-btn">
+                Enquire Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+  
   <section class="section stats-section">
     <div class="container">
       <span class="section-kicker light">At a Glance</span>
