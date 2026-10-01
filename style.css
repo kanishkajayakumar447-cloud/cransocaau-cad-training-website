@@ -84,3 +84,388 @@ details p{color:var(--muted);margin-top:12px}
 .modal-close{position:absolute;right:16px;top:12px;border:0;background:none;font-size:30px;cursor:pointer}
 @media(max-width:980px){.cards-4{grid-template-columns:repeat(2,1fr)}.nav{display:none}.menu-toggle{display:block}.nav.open{display:flex;position:absolute;left:4%;right:4%;top:78px;background:var(--navy);padding:20px;border-radius:0 0 14px 14px;flex-direction:column}.nav-cta{display:none}.stats-grid,.cards-3{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.section{padding:65px 0}.cards-4,.cards-3,.cards-2,.stats-grid,.contact-grid{grid-template-columns:1fr}.hero{min-height:78vh}.hero-content{padding:80px 0}.hero p{font-size:16px}.footer-inner{flex-direction:column;text-align:center}}
+
+/* =====================================================
+   V2.0 COURSE-BASED SKILL ASSESSMENT
+===================================================== */
+
+.assessment-section {
+    background: #f4f7fb;
+    padding: 90px 8%;
+}
+
+.assessment-header {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+}
+
+.assessment-badge {
+    display: inline-block;
+    background: #ff7b00;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.assessment-header h2 {
+    margin-bottom: 20px;
+}
+
+.assessment-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* MAIN CARD */
+
+.assessment-card {
+    max-width: 950px;
+    margin: 45px auto 0;
+    background: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    text-align: center;
+}
+
+.assessment-card h3 {
+    color: #0b1f33;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.assessment-subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* COURSE OPTIONS */
+
+.course-options {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(170px, 1fr));
+
+    gap: 18px;
+}
+
+.course-option {
+    border: 2px solid #e5e9ef;
+    background: white;
+    padding: 25px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.course-option span {
+    font-size: 35px;
+}
+
+.course-option strong {
+    font-size: 18px;
+    color: #0b1f33;
+}
+
+.course-option small {
+    color: #777;
+}
+
+.course-option:hover {
+    border-color: #ff7b00;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+
+/* SELECTED COURSE */
+
+.selected-course-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.assessment-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px 0;
+}
+
+.assessment-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.assessment-info strong {
+    font-size: 25px;
+    color: #ff7b00;
+}
+
+.assessment-info span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* BUTTONS */
+
+.assessment-btn {
+    display: inline-block;
+    border: none;
+    background: #ff7b00;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.assessment-btn:hover {
+    background: #0b1f33;
+    color: white;
+}
+
+.back-btn {
+    border: none;
+    background: transparent;
+    color: #555;
+    padding: 13px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.back-btn:hover {
+    color: #ff7b00;
+}
+
+
+/* QUESTION */
+
+.question-card {
+    text-align: left;
+}
+
+.question-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    color: #555;
+    font-weight: 600;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #e8edf3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 10%;
+    background: #ff7b00;
+    transition: .3s;
+}
+
+.question-card h3 {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+
+/* OPTIONS */
+
+.options {
+    display: grid;
+    gap: 15px;
+}
+
+.option {
+    border: 2px solid #e1e5ea;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 16px;
+    text-align: left;
+}
+
+.option:hover {
+    border-color: #ff7b00;
+    background: #fff8f1;
+}
+
+.option.selected {
+    border-color: #ff7b00;
+    background: #fff1e3;
+}
+
+
+/* QUESTION BUTTONS */
+
+.question-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+/* RESULT */
+
+.result-card {
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 55px;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid #ff7b00;
+
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-circle strong {
+    font-size: 30px;
+    color: #0b1f33;
+}
+
+.score-circle span {
+    color: #777;
+}
+
+.result-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.level-badge {
+    display: inline-block;
+    padding: 8px 22px;
+    background: #0b1f33;
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.result-card p {
+    color: #666;
+}
+
+.recommended-course {
+    margin: 30px auto;
+    padding: 20px;
+    background: #f4f7fb;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.recommended-course span {
+    color: #777;
+    font-size: 14px;
+}
+
+.recommended-course strong {
+    color: #0b1f33;
+    font-size: 20px;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    .assessment-section {
+        padding: 60px 5%;
+    }
+
+    .assessment-card {
+        padding: 25px 18px;
+    }
+
+    .assessment-card h3 {
+        font-size: 23px;
+    }
+
+    .course-options {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .assessment-info {
+        gap: 25px;
+    }
+
+    .question-top {
+        font-size: 14px;
+    }
+
+    .question-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .back-btn {
+        margin-left: 0;
+    }
+
+    .result-buttons {
+        flex-direction: column;
+    }
+
+    .result-buttons .assessment-btn {
+        width: 100%;
+    }
+}
+
+@media(max-width:450px) {
+
+    .course-options {
+        grid-template-columns: 1fr;
+    }
+
+}
